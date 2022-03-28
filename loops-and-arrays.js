@@ -6,13 +6,27 @@
 
 const names = ["Henk", "Piet", "Fred", "Joop"];
 
+console.log(names);
+
+// Methode 1
+for(let i = 0; i < names.length; i++)
+    {
+    console.log(names[i] + "je")
+    }
+
+// Methode 2 - waarde in array blijvend aanpassen
+names.forEach((element, i) =>
+    {
+    names[i] = element + "je";
+    }
+    );
+    console.log(names);
+
 // Verwachtte uitkomsten:
 // Vóór het script zie je de originele waardes:
 // console.log(names) geeft: ["Henk", "Piet", "Fred", "Joop"]
 // Na jouw script zie je de aangepaste waardes:
 // console.log(names) geeft: ["Henkje", "Pietje", "Fredje", "Joopje"]
-
-
 
 
 // ==========================================
@@ -23,13 +37,39 @@ const names = ["Henk", "Piet", "Fred", "Joop"];
 
 const numbers = [2, 4, 5, 29, 38];
 
+// Methode 1
+for(let i = 0; i < numbers.length; i++)
+    {
+    if(i % 2 === 0)
+    {
+    console.log(numbers[i] *2);
+    }
+    else
+    {
+    console.log(numbers[i] *3);
+    }
+    }
+
+// Methode 2 - waarde in array blijvend aanpassen
+numbers.forEach((element, i) =>
+    {
+    if(i % 2 === 0)
+    {
+    numbers[i] = element *2;
+    }
+    else
+    {
+    numbers[i] = element *3;
+    }
+    }
+    );
+    console.log(numbers)
+
 // Verwachtte uitkomsten:
 // Vóór het script zie je de originele waardes:
 // console.log(numbers) geeft: [2, 4, 5, 29, 38];
 // Na jouw script zie je de aangepaste waardes:
 // console.log(numbers) geeft: [ 4, 8, 15, 87, 76 ];
-
-
 
 
 // ==========================================
@@ -42,6 +82,20 @@ const numbers = [2, 4, 5, 29, 38];
 
 const squares = [30, 2, 8, 24, 11];
 
+// Methode 1
+for(let i = 0; i < squares.length; i++)
+    {
+    console.log("Het volume van " + squares[i] + " is " + squares[i]*squares[i]*squares[i]);
+    }
+
+// Methode 2 - waarde in array blijvend aanpassen
+squares.forEach((element, i) =>
+    {
+    squares[i] = squares[i]*squares[i]*squares[i];
+    }
+    );
+    console.log(squares)
+
 // Verwachtte uitkomsten:
 // Vóór het script zie je de originele waardes:
 // console.log(squares) geeft: [30, 2, 8, 24, 11];
@@ -52,4 +106,4 @@ const squares = [30, 2, 8, 24, 11];
 //   'Het volume van 8 is 512',
 //   'Het volume van 24 is 13824',
 //   'Het volume van 11 is 1331'
-// ]
+//
